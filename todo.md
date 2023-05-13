@@ -1,0 +1,2 @@
+-   Design Schematic for thermal sensing
+-   API endpoint
