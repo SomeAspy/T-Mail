@@ -4,9 +4,9 @@ import config from '../config/config.json';
 
 import type { Letter } from './types/sendEmail.d.ts';
 
-const transporter = createTransport(config.email.SMTP as TransportOptions);
-
 export async function sendEmail(temp: number): Promise<void> {
+    const transporter = createTransport(config.email.SMTP as TransportOptions);
+
     const letter: Letter = {
         from: config.email.from,
         to: config.email.to.join(', '),
