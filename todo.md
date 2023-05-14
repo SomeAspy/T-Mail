@@ -1,2 +1,4 @@
 -   Design Schematic for thermal sensing
 -   API endpoint
+-   log every temp check to spreadsheet
+-   Location ID/Name in config file
