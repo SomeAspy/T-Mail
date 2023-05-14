@@ -12,3 +12,6 @@ Send an email when the temperature reaches or exits a given range.
 ## Configuration
 
 See Docs/README.md for configuration options.
+
+
+### This Repository was commissioned by my manager
