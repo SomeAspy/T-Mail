@@ -9,22 +9,19 @@ import dht from 'pigpio-dht';
 
 const sensor = dht(config.sensing.GPIO, config.sensing.sensorType);
 
-export default function readEnvironment(): Promise<EnvironmentReading> {
-    return new Promise((resolve, reject) => {
-        sensor.read();
+export default async function readEnvironment(): Promise<EnvironmentReading> {
+    return new Promise((resolve) => {
+        setInterval(() => sensor.read(), 3000);
         sensor.on('result', (data: RawEnvironmentReading) => {
-            console.log(
-                `Got reading:\nT=${data.temperature}°C\nH=${data.humidity}%`,
-            );
             const returnData: EnvironmentReading = {
                 timestamp: Date.now(),
                 temperature: Math.round(data.temperature * 10) / 10,
                 humidity: Math.round(data.humidity * 10) / 10,
             };
+            console.log(
+                `Temperature: ${returnData.temperature}°C | Humidity: ${returnData.humidity}%`,
+            );
             resolve(returnData);
-        });
-        sensor.on('badChecksum', () => {
-            reject('badChecksum');
         });
     });
 }
