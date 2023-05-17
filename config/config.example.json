@@ -1,14 +1,23 @@
 {
-    "temperature": {
-        "max": 30,
-        "min": 15,
-        "interval": 5
+    "identifier": "Dev-1",
+    "sensing": {
+        "interval": 5,
+        "GPIO": 4,
+        "sensorType": 22,
+        "humidity": {
+            "max": 80,
+            "min": 20
+        },
+        "temperature": {
+            "max": 30,
+            "min": 15
+        }
     },
     "email": {
-        "interval": 60,
+        "intervalWhileTriggered": 60,
         "content": {
             "subject": "Temperature Alert!",
-            "body": "Temperature is currently {temp}! This is outside of your defined range of {min} to {max}. Please investigate."
+            "body": "Environment at %identifier% is currently %temp%°C and %humidity%%! This is outside of your defined range of %minTemp%°C to %maxTemp%°C or %minHumidity%% to %maxHumidity%%. Please investigate."
         },
         "to": [
             "admin@example.com"
@@ -21,8 +30,12 @@
             "auth": {
                 "type": "login",
                 "user": "noreply@example.com",
-                "pass": "correct horse battery staple"
+                "pass": "Correct Horse Battery Staple"
             }
         }
+    },
+    "googleSheets": {
+        "oAuthClientSecret": "",
+        "oAuthClientId": ""
     }
 }

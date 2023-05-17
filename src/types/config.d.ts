@@ -1,11 +1,20 @@
 export interface Config {
-    temperature: {
-        min: number;
-        max: number;
+    identifier: string;
+    sensing: {
         interval: number;
+        GPIO: number;
+        sensorType: number;
+        temperature: {
+            min: number;
+            max: number;
+        };
+        humidity: {
+            min: number;
+            max: number;
+        };
     };
     email: {
-        interval: number;
+        intervalWhileTriggered: number;
         content: {
             subject: string;
             body: string;
@@ -22,5 +31,9 @@ export interface Config {
                 pass: string;
             };
         };
+    };
+    googleSheets: {
+        oAuthClientSecret: string;
+        oAuthClientId: string;
     };
 }
