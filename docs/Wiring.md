@@ -20,4 +20,4 @@ The Amazon page claims that the Gowoops sensor is 5V compatible. This is not tru
 | **Out** | GPIO 4 (Pin 7) |
 | **-**   | Ground (Pin 6) |
 
-![Gowoops Wiring](WiringDiagramGowoops.png)
+![Gowoops Wiring](WiringDiagramGowoops.webp)
