@@ -21,17 +21,17 @@
             "body": "Environment at %identifier% is currently %temp%°C and %humidity%%! This is outside of your defined range of %minTemp%°C to %maxTemp%°C or %minHumidity%% to %maxHumidity%%. Please investigate."
         },
         "to": [
-            "admin@example.com"
+            "aidenbaker11@gmail.com"
         ],
-        "from": "noreply@example.com",
+        "from": "test@aspy.dev",
         "SMTP": {
-            "host": "smtp.example.com",
+            "host": "zoho.com",
             "port:": 465,
             "secure": true,
             "auth": {
                 "type": "login",
-                "user": "noreply@example.com",
-                "pass": "Correct Horse Battery Staple"
+                "user": "test@aspy.dev",
+                "pass": "UpHBzR2%jR@J?!s"
             }
         }
     },

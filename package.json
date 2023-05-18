@@ -4,7 +4,7 @@
 		"start": "node dist/index.js",
 		"lint": "eslint .",
 		"build": "tsc",
-		"dev": "tsx src/index.tsx --watch --noEmit"
+		"test_email": "tsx src/tests/email.ts"
 	},
 	"devDependencies": {
 		"@types/node": "^20.1.7",

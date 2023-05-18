@@ -1,16 +1,8 @@
-import { TransportOptions, createTransport } from 'nodemailer';
-
+import { createTransport } from 'nodemailer';
 import config from '../config/config.json' assert { type: 'json' };
-
-import type { Letter } from './types/sendEmail.d.ts';
-
-export async function sendEmail(
-    temp: number,
-    humidity: number,
-): Promise<boolean> {
-    const transporter = createTransport(config.email.SMTP as TransportOptions);
-
-    const letter: Letter = {
+export async function sendEmail(temp, humidity) {
+    const transporter = createTransport(config.email.SMTP);
+    const letter = {
         from: config.email.from,
         to: config.email.to.join(', '),
         subject: config.email.content.subject,
@@ -23,7 +15,6 @@ export async function sendEmail(
             .replace(/%minHumidity%/g, config.sensing.humidity.min.toString())
             .replace(/%maxHumidity%/g, config.sensing.humidity.max.toString()),
     };
-
     try {
         await Promise.race([
             transporter.sendMail(letter),
@@ -34,7 +25,8 @@ export async function sendEmail(
             }),
         ]);
         return true;
-    } catch (error) {
+    }
+    catch (error) {
         console.error(error);
         return false;
     }
