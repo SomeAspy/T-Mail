@@ -7,27 +7,20 @@ import {
 
 const sensor = dht(config.sensing.GPIO, config.sensing.sensorType);
 
-export function sensorRead(): EnvironmentReading {
-    const returnData: EnvironmentReading = {
-        timestamp: -1,
-        temperature: 0,
-        humidity: 0,
-    };
-    sensor.read();
-    const sensorRetry = setInterval(() => {
-        // Don't spam the sensor
-        console.log('Reading environment...');
-        sensor.once('result', (data: RawEnvironmentReading) => {
-            console.log('Got environment data!');
-            returnData.timestamp = Date.now();
-            returnData.temperature = config.sensing.temperature.fahrenheit
-                ? (data.temperature * 9) / 5 + 32
-                : data.temperature;
-            returnData.humidity = data.humidity;
+export async function sensorRead(): Promise<EnvironmentReading> {
+    return new Promise((resolve) => {
+        sensor.read();
+        sensor.on('start', () => {
+            sensor.once('result', (data: RawEnvironmentReading) => {
+                sensor.removeAllListeners();
+                resolve({
+                    timestamp: Date.now(),
+                    temperature: config.sensing.temperature.fahrenheit
+                        ? data.temperature * 1.8 + 32
+                        : data.temperature,
+                    humidity: data.humidity,
+                });
+            });
         });
-        if (returnData.timestamp !== -1) {
-            clearInterval(sensorRetry);
-        }
-    }, 500);
-    return returnData;
+    });
 }
