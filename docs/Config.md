@@ -14,14 +14,16 @@ Config:
             "min": 20
         },
         "temperature": {
+            "fahrenheit": false,
             "max": 30,
             "min": 15
         }
     },
     "email": {
+        "enabled": true,
         "intervalWhileTriggered": 60,
         "content": {
-            "subject": "Temperature Alert!",
+            "subject": "%identifier% - Temperature Alert!",
             "body": "Environment at %identifier% is currently %temp%°C and %humidity%%! This is outside of your defined range of %minTemp%°C to %maxTemp%°C or %minHumidity%% to %maxHumidity%%. Please investigate."
         },
         "to": ["admin@example.com"],
@@ -38,6 +40,7 @@ Config:
         }
     },
     "googleSheets": {
+        "enabled": false,
         "oAuthClientSecret": "",
         "oAuthClientId": ""
     }
@@ -55,9 +58,11 @@ Config:
         -   `max` - (in %) The upper limit of the safe range (email will be sent if it rises above)
         -   `min` - (in %) The lower limit of the safe range (email will be sent if it falls below)
     -   `temperature`:
+        -   `fahrenheit` - Whether or not to use Fahrenheit instead of Celsius
         -   `max` - (in C) The upper limit of the safe range (email will be sent if it rises above)
         -   `min` - (in C) The lower limit of the safe range (email will be sent if it falls below)
 -   `email`:
+    -   `enabled` - Whether or not to send emails
     -   `intervalWhenTriggered` - (in minutes) The interval at which to send emails if the temperature has not returned to the safe range
     -   `content`:
         -   `subject` - The subject of the email
@@ -80,5 +85,6 @@ Config:
         -   `user` - The username to use for authentication
         -   `pass` - The password to use for authentication
 -   `googleSheets`:
+    -   `enabled` - Whether or not to use Google Sheets
     -   `oAuthClientSecret` - The OAuth client secret to use for Google Sheets
     -   `oAuthClientId` - The OAuth client ID to use for Google Sheets

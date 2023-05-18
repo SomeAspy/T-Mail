@@ -1,7 +1,6 @@
-import { environmentWatcher, startWatcher } from './watchEnvironment.js';
 import config from '../config/config.json' assert { type: 'json' };
 import { sendEmail } from './sendEmail.js';
-import { EnvironmentReading } from './types/readEnvironment.js';
+import { EnvironmentReading } from './types/watchEnvironment.js';
 
 console.log(`
 T-Mail - https://github.com/SomeAspy/T-Mail
@@ -23,14 +22,3 @@ Current Configs:
 -----------------------------------------------
 Starting up!
 `);
-
-void startWatcher();
-
-environmentWatcher.on('badEnv', (environment: EnvironmentReading) => {
-    async () => {
-        console.log('Bad Environment detected! Running Actions...');
-        if (config.email.enabled) {
-            await sendEmail(environment.temperature, environment.humidity);
-        }
-    };
-});

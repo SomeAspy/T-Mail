@@ -1,5 +1,5 @@
 -   [Home](/)
--   [Config File](/Configu.md)
+-   [Config File](/Config.md)
 -   [Wiring](/Wiring.md)
 -   [Google Sheets](/GoogleSheets.md)
 -   [Email](/Email.md)

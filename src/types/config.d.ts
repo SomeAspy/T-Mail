@@ -4,21 +4,23 @@ export interface Config {
         interval: number;
         GPIO: number;
         sensorType: number;
-        temperature: {
+        humidity: {
             min: number;
             max: number;
         };
-        humidity: {
+        temperature: {
+            fahrenheit: boolean;
             min: number;
             max: number;
         };
     };
     email: {
-        intervalWhileTriggered: number;
+        enabled: boolean;
         content: {
             subject: string;
             body: string;
         };
+        intervalWhileTriggered: number;
         to: string[];
         from: string;
         SMTP: {
@@ -33,6 +35,7 @@ export interface Config {
         };
     };
     googleSheets: {
+        enabled: boolean;
         oAuthClientSecret: string;
         oAuthClientId: string;
     };

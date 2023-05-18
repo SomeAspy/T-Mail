@@ -9,6 +9,7 @@
             "min": 20
         },
         "temperature": {
+            "fahrenheit": false,
             "max": 30,
             "min": 15
         }
@@ -17,7 +18,7 @@
         "enabled": true,
         "intervalWhileTriggered": 60,
         "content": {
-            "subject": "Temperature Alert!",
+            "subject": "%identifier% - Temperature Alert!",
             "body": "Environment at %identifier% is currently %temp%°C and %humidity%%! This is outside of your defined range of %minTemp%°C to %maxTemp%°C or %minHumidity%% to %maxHumidity%%. Please investigate."
         },
         "to": [

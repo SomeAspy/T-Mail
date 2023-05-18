@@ -1,4 +1,5 @@
 import { TransportOptions, createTransport } from 'nodemailer';
+import { fillBlanks } from './lib.js';
 
 import config from '../config/config.json' assert { type: 'json' };
 
@@ -13,15 +14,8 @@ export async function sendEmail(
     const letter: Letter = {
         from: config.email.from,
         to: config.email.to.join(', '),
-        subject: config.email.content.subject,
-        text: config.email.content.body
-            .replace(/%temp%/g, temp.toString())
-            .replace(/%minTemp%/g, config.sensing.temperature.min.toString())
-            .replace(/%maxTemp%/g, config.sensing.temperature.max.toString())
-            .replace(/%identifier%/g, config.identifier)
-            .replace(/%humidity%/g, humidity.toString())
-            .replace(/%minHumidity%/g, config.sensing.humidity.min.toString())
-            .replace(/%maxHumidity%/g, config.sensing.humidity.max.toString()),
+        subject: fillBlanks(config.email.content.subject, temp, humidity),
+        text: fillBlanks(config.email.content.body, temp, humidity),
     };
 
     try {

@@ -7,7 +7,7 @@
 		"test_email": "tsx src/tests/email.ts"
 	},
 	"devDependencies": {
-		"@types/node": "^20.1.7",
+		"@types/node": "^20.2.1",
 		"@types/nodemailer": "^6.4.7",
 		"@types/pigpio-dht": "^1.1.1",
 		"@typescript-eslint/eslint-plugin": "^5.59.6",
