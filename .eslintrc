@@ -13,7 +13,11 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
-    "ignorePatterns": [],
+    "ignorePatterns": [
+        "dist",
+        "node_modules",
+        "docs"
+    ],
     "parser": "@typescript-eslint/parser",
     "overrides": [],
     "parserOptions": {
@@ -21,7 +25,10 @@
         "tsconfigRootDir": "__dirname",
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "ecmaFeatures": {}
+        "ecmaFeatures": {},
+        "extraFileExtensions": [
+            ".json"
+        ]
     },
     "rules": {
         "indent": [

@@ -2,7 +2,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "node dist/index.js",
-		"lint": "eslint .",
+		"lint": "eslint src/**/* config/**/* -c .eslintrc",
 		"build": "tsc",
 		"test_email": "tsx src/tests/email.ts"
 	},

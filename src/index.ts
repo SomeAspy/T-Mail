@@ -1,6 +1,4 @@
 import config from '../config/config.json' assert { type: 'json' };
-import { sendEmail } from './sendEmail.js';
-import { EnvironmentReading } from './types/watchEnvironment.js';
 
 console.log(`
 T-Mail - https://github.com/SomeAspy/T-Mail
