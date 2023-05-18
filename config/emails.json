@@ -1,0 +1,10 @@
+{
+    "highTemp": {
+        "subject": "%identifier% - High temperature alert!",
+        "body": "Environment at %identifier% is currently %temp%°C! This is above of your defined threshold of %maxTemp%°C. Please investigate."
+    },
+    "lowTemp": {
+        "subject": "%identifier% - Low temperature alert!",
+        "body": "Environment at %identifier% is currently %temp%°C! This is below of your defined threshold of %minTemp%°C. Please investigate."
+    }
+}

@@ -1,21 +1,30 @@
 import { TransportOptions, createTransport } from 'nodemailer';
-import { fillBlanks } from './lib.js';
 
 import config from '../config/config.json' assert { type: 'json' };
 
-import type { Letter } from './types/sendEmail.d.ts';
+import type { Letter, Content } from './types/sendEmail.d.ts';
+import { fillBlanks } from './lib.js';
+import { EnvironmentReading } from './types/watchEnvironment.js';
 
 export async function sendEmail(
-    temp: number,
-    humidity: number,
+    content: Content,
+    environment: EnvironmentReading,
 ): Promise<boolean> {
     const transporter = createTransport(config.email.SMTP as TransportOptions);
 
     const letter: Letter = {
         from: config.email.from,
         to: config.email.to.join(', '),
-        subject: fillBlanks(config.email.content.subject, temp, humidity),
-        text: fillBlanks(config.email.content.body, temp, humidity),
+        body: fillBlanks(
+            content.body,
+            environment.temperature,
+            environment.humidity,
+        ),
+        subject: fillBlanks(
+            content.subject,
+            environment.temperature,
+            environment.humidity,
+        ),
     };
 
     try {

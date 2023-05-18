@@ -1,3 +1,2 @@
 -   API endpoint
 -   log every temp check to spreadsheet
--   Fix Github Actions Linting (PiGPIO has no installation candidate)
