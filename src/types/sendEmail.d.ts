@@ -1,9 +1,9 @@
-export interface Content {
+export interface EmailContent {
     subject: string;
     text: string;
 }
 
-export interface Letter extends Content {
+export interface Letter extends EmailContent {
     from: string;
     to: string;
 }

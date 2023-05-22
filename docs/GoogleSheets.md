@@ -36,9 +36,24 @@ T-Mail can log readings to a Google Sheet.
         4. Click "Send"
 
 6.  Set the config options in `config/config.json`
-    1. Set `googleSheets.enabled` to `true`
-    2. Fill in `googleSheets.spreadSheetID`, this is the spreadsheet ID from the URL of the sheet you want to use.
-    3. Fill in `googleSheets.tabName`, this is the name of the sheet or page of the entire spreadsheet you want to use
-    4. Fill in `googleSheets.topLeftCell`, this is the cell that the data will start being written to. (For example, `A1:D1` will start in the top left corner)
 
-![Google Sheets URL](googleSheetsURL.png)
+        1. Set `googleSheets.enabled` to `true`
+        2. Fill in `googleSheets.spreadSheetID`, this is the spreadsheet ID from the URL of the sheet you want to use.
+        3. Fill in `googleSheets.SheetID`, this is the name of the sheet or page of the entire spreadsheet you want to use
+        4. Fill in `googleSheets.topLeftCell`, this is the cell that the data will start being written to. (For example, `A1:D1` will start in the top left corner)
+        5. Fill in `googleSheets.data`, [Just like the email system](Email.md) variables are supported.
+
+            - The following variables are available:
+
+                - `%temp%` - The current temperature
+                - `%minTemp%` - The lower limit of the safe temperature range
+                - `%maxTemp%` - The upper limit of the safe range
+                - `%humidity%` - The current humidity
+                - `%minHumidity%` - The lower limit of the safe humidity range
+                - `%maxHumidity%` - The upper limit of the safe humidity range
+                - `%identifier%` - The identifier of the device
+                - `%time%` - The time the sensor was checked
+
+    This is the Google Sheets ID:
+
+    ![Google Sheets URL](sheetsURL.png)

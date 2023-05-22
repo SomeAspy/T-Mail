@@ -1,5 +1,3 @@
 import { append2sheet } from '../gSheets.js';
 
-const data = [new Date().toLocaleString(), 'Name', 'Temperature', 'Email'];
-
-await append2sheet();
+await append2sheet({ temperature: 1, humidity: 2, timestamp: new Date() });

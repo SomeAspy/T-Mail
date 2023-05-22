@@ -37,6 +37,12 @@
         "enabled": false,
         "spreadSheetID": "SomeCoolSheetID",
         "tabName": "Sheet1",
-        "topLeftCell": "A1:D1"
+        "topLeftCell": "A1:D1",
+        "data": [
+            "%identifier%",
+            "%time%",
+            "%temp%",
+            "%humidity%"
+        ]
     }
 }

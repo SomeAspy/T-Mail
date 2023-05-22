@@ -1,11 +1,17 @@
 import { google } from 'googleapis';
-import type { EnvironmentReading } from './types/sensor.d.ts';
 import config from '../config/config.json' assert { type: 'json' };
 import gAuth from '../config/credentials.json' assert { type: 'json' };
+import { fillBlanks } from './lib.js';
+import { EnvironmentReading } from './types/sensor.js';
 
-const sheets = google.sheets('v4');
+export async function append2sheet(
+    readings: EnvironmentReading,
+): Promise<void> {
+    const parsedData: string[] = [];
+    config.googleSheets.data.forEach((item) => {
+        parsedData.push(fillBlanks(item, readings));
+    });
 
-export async function append2sheet(): Promise<void> {
     const jwtClient = new google.auth.JWT(
         gAuth.client_email,
         undefined,
@@ -19,13 +25,13 @@ export async function append2sheet(): Promise<void> {
         }
         console.log('Preparing to write to Google Sheets...');
     });
-    await sheets.spreadsheets.values.append({
+    await google.sheets('v4').spreadsheets.values.append({
         auth: jwtClient,
         spreadsheetId: config.googleSheets.spreadSheetID,
         range: `${config.googleSheets.tabName}!${config.googleSheets.topLeftCell}`,
         valueInputOption: 'USER_ENTERED',
         requestBody: {
-            values: [[]],
+            values: [parsedData],
         },
     });
 }

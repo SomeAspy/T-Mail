@@ -25,17 +25,28 @@ Starting up!
 
 import { sensorRead } from './sensor.js';
 import { fireEmailEvent } from './actionHandler.js';
+import { append2sheet } from './gSheets.js';
 
 function main() {
     config.email.lastSent =
         Date.now() - 60000 * config.email.intervalWhileTriggered;
-    // this is undesirable.
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
     setInterval(async () => {
         const environment = await sensorRead();
         console.log(`Reading Triggered: ${JSON.stringify(environment)}`);
         if (config.email.enabled) {
-            await fireEmailEvent(environment);
+            try {
+                await fireEmailEvent(environment);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        if (config.googleSheets.enabled) {
+            try {
+                await append2sheet(environment);
+            } catch (error) {
+                console.error(error);
+            }
         }
     }, 60000 * config.sensing.interval);
 }

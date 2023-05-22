@@ -57,5 +57,6 @@ The following variables are available:
 
 ### Custom Variables
 
-more advanced users can add custom variables to the template system.
+Advanced users can add custom variables to the template system.
+
 To do this, you must edit `src/lib.ts` and add `.replace()` arguments to the `fillBlanks()` function.

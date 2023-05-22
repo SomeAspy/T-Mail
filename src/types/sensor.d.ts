@@ -4,5 +4,5 @@ export interface RawEnvironmentReading {
 }
 
 export interface EnvironmentReading extends RawEnvironmentReading {
-    timestamp: number;
+    timestamp: Date;
 }

@@ -7,7 +7,7 @@ await sendEmail(
         subject: 'Test Email!',
         text: 'If you are getting this it worked!',
     },
-    { temperature: 24, humidity: 37, timestamp: 1 },
+    { temperature: 24, humidity: 37, timestamp: new Date() },
 ).then((result) => {
     console.log(
         `Email test ${result ? 'Passed! Check your inbox.' : 'Failed!'}`,
