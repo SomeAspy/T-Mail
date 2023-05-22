@@ -36,6 +36,7 @@ export async function sendEmail(
                 }, 10000);
             }),
         ]);
+        config.email.lastSent = Math.round(Date.now() / 1000);
         return true;
     } catch (error) {
         console.error(error);

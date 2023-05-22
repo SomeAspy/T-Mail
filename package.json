@@ -7,13 +7,13 @@
 		"test_email": "tsx src/tests/email.ts"
 	},
 	"devDependencies": {
-		"@types/node": "^20.2.1",
+		"@types/node": "^20.2.3",
 		"@types/nodemailer": "^6.4.8",
 		"@types/pigpio-dht": "^1.1.1",
 		"@typescript-eslint/eslint-plugin": "^5.59.6",
 		"@typescript-eslint/parser": "^5.59.6",
 		"docsify-cli": "^4.4.4",
-		"eslint": "^8.40.0",
+		"eslint": "^8.41.0",
 		"eslint-plugin-json": "^3.1.0",
 		"tsx": "^3.12.7",
 		"typescript": "^5.0.4",

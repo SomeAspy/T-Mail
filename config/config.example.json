@@ -17,10 +17,6 @@
     "email": {
         "enabled": true,
         "intervalWhileTriggered": 60,
-        "content": {
-            "subject": "%identifier% - Temperature Alert!",
-            "body": "Environment at %identifier% is currently %temp%°C and %humidity%%! This is outside of your defined range of %minTemp%°C to %maxTemp%°C or %minHumidity%% to %maxHumidity%%. Please investigate."
-        },
         "to": [
             "admin@example.com"
         ],
@@ -34,7 +30,8 @@
                 "user": "noreply@example.com",
                 "pass": "Correct Horse Battery Staple"
             }
-        }
+        },
+        "lastSent": 0
     },
     "googleSheets": {
         "enabled": false,

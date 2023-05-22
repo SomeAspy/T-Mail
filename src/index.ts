@@ -23,12 +23,18 @@ Current Configs:
 Starting up!
 `);
 
+config.email.lastSent = 0;
+
 import { sensorRead } from './sensor.js';
+import { checkEnvironment } from './actionHandler.js';
 
 function main() {
+    // this is undesirable.
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
     setInterval(async () => {
-        console.log(`Reading Triggered: ${JSON.stringify(await sensorRead())}`);
+        const environment = await sensorRead();
+        console.log(`Reading Triggered: ${JSON.stringify(environment)}`);
+        await checkEnvironment(environment);
     }, 60000 * config.sensing.interval);
 }
 

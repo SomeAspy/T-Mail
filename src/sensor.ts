@@ -14,7 +14,7 @@ export async function sensorRead(): Promise<EnvironmentReading> {
             sensor.once('result', (data: RawEnvironmentReading) => {
                 sensor.removeAllListeners();
                 resolve({
-                    timestamp: Date.now(),
+                    timestamp: Math.round(Date.now() * 1000), // JS is stupid.
                     temperature: config.sensing.temperature.fahrenheit
                         ? data.temperature * 1.8 + 32
                         : data.temperature,

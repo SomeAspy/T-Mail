@@ -1,6 +1,6 @@
 # T-Mail
 
-Config:
+# Main config `config/config.json`
 
 ```json
 {
@@ -22,10 +22,6 @@ Config:
     "email": {
         "enabled": true,
         "intervalWhileTriggered": 60,
-        "content": {
-            "subject": "%identifier% - Temperature Alert!",
-            "body": "Environment at %identifier% is currently %temp%°C and %humidity%%! This is outside of your defined range of %minTemp%°C to %maxTemp%°C or %minHumidity%% to %maxHumidity%%. Please investigate."
-        },
         "to": ["admin@example.com"],
         "from": "noreply@example.com",
         "SMTP": {
@@ -37,7 +33,8 @@ Config:
                 "user": "noreply@example.com",
                 "pass": "Correct Horse Battery Staple"
             }
-        }
+        },
+        "lastSent": 0
     },
     "googleSheets": {
         "enabled": false,
@@ -64,16 +61,6 @@ Config:
 -   `email`:
     -   `enabled` - Whether or not to send emails
     -   `intervalWhenTriggered` - (in minutes) The interval at which to send emails if the temperature has not returned to the safe range
-    -   `content`:
-        -   `subject` - The subject of the email
-        -   `body` - The body of the email. The following variables are available:
-            -   `%temp%` - The current temperature
-            -   `%minTemp%` - The lower limit of the safe temperature range
-            -   `%maxTemp%` - The upper limit of the safe range
-            -   `%humidity%` - The current humidity
-            -   `%minHumidity%` - The lower limit of the safe humidity range
-            -   `%maxHumidity%` - The upper limit of the safe humidity range
-            -   `%identifier%` - The identifier of the device
     -   `to` - An array of email addresses to send the email to
     -   `from` - The email address to send the email from
 -   `SMTP`:
@@ -85,6 +72,43 @@ Config:
         -   `user` - The username to use for authentication
         -   `pass` - The password to use for authentication
 -   `googleSheets`:
+
     -   `enabled` - Whether or not to use Google Sheets
     -   `oAuthClientSecret` - The OAuth client secret to use for Google Sheets
     -   `oAuthClientId` - The OAuth client ID to use for Google Sheets
+
+# Email Template Config `config/emailTemplates.json`
+
+```json
+{
+    "highTemp": {
+        "subject": "%identifier% - High temperature alert!",
+        "body": "Environment at %identifier% is currently %temp%°C! This is above of your defined threshold of %maxTemp%°C. Please investigate."
+    },
+    "lowTemp": {
+        "subject": "%identifier% - Low temperature alert!",
+        "body": "Environment at %identifier% is currently %temp%°C! This is below of your defined threshold of %minTemp%°C. Please investigate."
+    },
+    "highHumidity": {
+        "subject": "%identifier% - High humidity alert!",
+        "body": "Environment at %identifier% is currently %humidity%%! This is above of your defined threshold of %maxHumidity%%. Please investigate."
+    },
+    "lowHumidity": {
+        "subject": "%identifier% - Low humidity alert!",
+        "body": "Environment at %identifier% is currently %humidity%%! This is below of your defined threshold of %minHumidity%%. Please investigate."
+    }
+}
+```
+
+## Parameters:
+
+-   `subject` - The subject of the email
+-   `body` - The body of the email. The following variables are available:
+    -   `%temp%` - The current temperature
+    -   `%minTemp%` - The lower limit of the safe temperature range
+    -   `%maxTemp%` - The upper limit of the safe range
+    -   `%humidity%` - The current humidity
+    -   `%minHumidity%` - The lower limit of the safe humidity range
+    -   `%maxHumidity%` - The upper limit of the safe humidity range
+    -   `%identifier%` - The identifier of the device
+    -   `%time%` - The time the sensor was checked

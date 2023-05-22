@@ -16,10 +16,6 @@ export interface Config {
     };
     email: {
         enabled: boolean;
-        content: {
-            subject: string;
-            body: string;
-        };
         intervalWhileTriggered: number;
         to: string[];
         from: string;
@@ -33,10 +29,20 @@ export interface Config {
                 pass: string;
             };
         };
+        lastSent: number;
     };
     googleSheets: {
         enabled: boolean;
         oAuthClientSecret: string;
         oAuthClientId: string;
     };
+}
+
+import type { Content } from './sendEmail.d.ts';
+
+export interface EmailTemplates {
+    highTemp: Content;
+    lowTemp: Content;
+    highHumidity: Content;
+    lowHumidity: Content;
 }
