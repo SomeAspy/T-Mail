@@ -1,6 +1,6 @@
 export interface Content {
     subject: string;
-    body: string;
+    text: string;
 }
 
 export interface Letter extends Content {

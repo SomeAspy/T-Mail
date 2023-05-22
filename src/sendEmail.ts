@@ -4,19 +4,18 @@ import config from '../config/config.json' assert { type: 'json' };
 
 import type { Letter, Content } from './types/sendEmail.d.ts';
 import { fillBlanks } from './lib.js';
-import { EnvironmentReading } from './types/watchEnvironment.js';
+import type { EnvironmentReading } from './types/sensor.d.ts';
 
 export async function sendEmail(
     content: Content,
     environment: EnvironmentReading,
 ): Promise<boolean> {
     const transporter = createTransport(config.email.SMTP as TransportOptions);
-
     const letter: Letter = {
         from: config.email.from,
         to: config.email.to.join(', '),
-        body: fillBlanks(
-            content.body,
+        text: fillBlanks(
+            content.text,
             environment.temperature,
             environment.humidity,
         ),
@@ -26,7 +25,6 @@ export async function sendEmail(
             environment.humidity,
         ),
     };
-
     try {
         await Promise.race([
             transporter.sendMail(letter),
@@ -36,7 +34,8 @@ export async function sendEmail(
                 }, 10000);
             }),
         ]);
-        config.email.lastSent = Math.round(Date.now() / 1000);
+        config.email.lastSent = Date.now();
+        console.log('Email Sent.');
         return true;
     } catch (error) {
         console.error(error);

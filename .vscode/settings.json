@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
+        "Creds",
+        "gcloud",
         "Gowoops",
         "GPIO",
-        "pigpio"
+        "pigpio",
+        "tmail"
     ]
 }

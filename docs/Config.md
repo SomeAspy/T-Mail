@@ -83,19 +83,19 @@
 {
     "highTemp": {
         "subject": "%identifier% - High temperature alert!",
-        "body": "Environment at %identifier% is currently %temp%°C! This is above of your defined threshold of %maxTemp%°C. Please investigate."
+        "text": "Environment at %identifier% is currently %temp%°C! This is above of your defined threshold of %maxTemp%°C. Please investigate."
     },
     "lowTemp": {
         "subject": "%identifier% - Low temperature alert!",
-        "body": "Environment at %identifier% is currently %temp%°C! This is below of your defined threshold of %minTemp%°C. Please investigate."
+        "text": "Environment at %identifier% is currently %temp%°C! This is below of your defined threshold of %minTemp%°C. Please investigate."
     },
     "highHumidity": {
         "subject": "%identifier% - High humidity alert!",
-        "body": "Environment at %identifier% is currently %humidity%%! This is above of your defined threshold of %maxHumidity%%. Please investigate."
+        "text": "Environment at %identifier% is currently %humidity%%! This is above of your defined threshold of %maxHumidity%%. Please investigate."
     },
     "lowHumidity": {
         "subject": "%identifier% - Low humidity alert!",
-        "body": "Environment at %identifier% is currently %humidity%%! This is below of your defined threshold of %minHumidity%%. Please investigate."
+        "text": "Environment at %identifier% is currently %humidity%%! This is below of your defined threshold of %minHumidity%%. Please investigate."
     }
 }
 ```
