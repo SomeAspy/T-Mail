@@ -4,6 +4,8 @@
         "gcloud",
         "Gowoops",
         "GPIO",
+        "gserviceaccount",
+        "keyfile",
         "pigpio",
         "tmail"
     ]

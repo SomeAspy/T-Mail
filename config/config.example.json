@@ -35,7 +35,8 @@
     },
     "googleSheets": {
         "enabled": false,
-        "oAuthClientSecret": "",
-        "oAuthClientId": ""
+        "spreadSheetID": "SomeCoolSheetID",
+        "tabName": "Sheet1",
+        "topLeftCell": "A1:D1"
     }
 }

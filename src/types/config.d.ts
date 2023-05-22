@@ -33,7 +33,10 @@ export interface Config {
     };
     googleSheets: {
         enabled: boolean;
-        sheetURL: string;
+        spreadSheetID: string;
+        tabName: string;
+        topLeftCell: string;
+        data: string[];
     };
 }
 
