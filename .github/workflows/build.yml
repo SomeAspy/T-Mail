@@ -32,11 +32,11 @@ jobs:
             - name: Install PiGPIO
               run: sudo apt-get update && sudo apt-get install -y pigpio
 
-            - name: Install Minimum Node.js dependencies
+            - name: Install Node.js dependencies
               run: pnpm install
 
             - name: rename config examples for build success
-              run: cp config/config.example.json config/config.json
+              run: cp config/config.example.json config/config.json && cp config/credentials.example.json config/credentials.json
 
             - name: Build using TSC
               run: pnpm run build
