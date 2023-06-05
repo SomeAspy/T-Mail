@@ -33,7 +33,7 @@ jobs:
               run: sudo apt-get update && sudo apt-get install -y pigpio
 
             - name: Install Minimum Node.js dependencies
-              run: pnpm install --production
+              run: pnpm install
 
             - name: rename config examples for build success
               run: cp config/config.example.json config/config.json
