@@ -8,8 +8,8 @@ It can be configured to send emails and log results to a Google Sheet.
 
 1.  Clone this repository
 2.  Install the [PiGPIO C Library](https://github.com/joan2937/pigpio)
-3.  Run `pnpm i`
-4.  Run `pnpm build`
+3.  Run `pnpm i --prod`
+4.  [Optional] Run `pnpm build` (The build output is included in dist to compensate for devices that will have stroke compiling locally)
 5.  Run `pnpm start` This will request root - it is needed to access the GPIO pins.
 
 ## Configuration

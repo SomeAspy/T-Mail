@@ -41,8 +41,8 @@
         "data": [
             "%identifier%",
             "%time%",
-            "%temp%",
-            "%humidity%"
+            "%temp%%unit%",
+            "%humidity%%"
         ]
     }
 }

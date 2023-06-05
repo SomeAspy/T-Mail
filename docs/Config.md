@@ -80,6 +80,10 @@
     -   `topLeftCell` - The cell to start writing data to
     -   `data` - An array of data to write to the sheet. [Just like the email system](Email.md) variables are supported.
 
+### Fahrenheit Warning
+
+If you use fahrenheit instead of celsius this applies to the whole program and config. Set min and max accordingly.
+
 # Email Template Config `config/emailTemplates.json`
 
 ```json

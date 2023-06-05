@@ -23,7 +23,7 @@ export async function append2sheet(
             console.error(err);
             return;
         }
-        console.log('Preparing to write to Google Sheets...');
+        console.log('Pushing data to Google Sheets.');
     });
     await google.sheets('v4').spreadsheets.values.append({
         auth: jwtClient,
