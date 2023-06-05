@@ -1,0 +1,48 @@
+{
+    "identifier": "Dev-1",
+    "sensing": {
+        "interval": 5,
+        "GPIO": 4,
+        "sensorType": 22,
+        "humidity": {
+            "max": 80,
+            "min": 20
+        },
+        "temperature": {
+            "fahrenheit": false,
+            "max": 30,
+            "min": 15
+        }
+    },
+    "email": {
+        "enabled": true,
+        "intervalWhileTriggered": 60,
+        "to": [
+            "admin@example.com"
+        ],
+        "from": "noreply@example.com",
+        "SMTP": {
+            "host": "smtp.example.com",
+            "port:": 465,
+            "secure": true,
+            "auth": {
+                "type": "login",
+                "user": "noreply@example.com",
+                "pass": "Correct Horse Battery Staple"
+            }
+        },
+        "lastSent": 0
+    },
+    "googleSheets": {
+        "enabled": false,
+        "spreadSheetID": "SomeCoolSheetID",
+        "tabName": "Sheet1",
+        "topLeftCell": "A1:D1",
+        "data": [
+            "%identifier%",
+            "%time%",
+            "%temp%%unit%",
+            "%humidity%%"
+        ]
+    }
+}
