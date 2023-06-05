@@ -41,7 +41,10 @@ jobs:
             - name: Build using TSC
               run: pnpm run build
 
+            - name: Remove build configs
+              run: rm config/config.json && rm config/credentials.json
+
             - name: Upload Build
               uses: actions/upload-artifact@v3
               with:
-                  path: dist
+                  path: dist/
