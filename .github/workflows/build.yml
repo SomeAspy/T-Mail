@@ -33,10 +33,10 @@ jobs:
               run: sudo apt-get update && sudo apt-get install -y pigpio
 
             - name: Install Minimum Node.js dependencies
-              run: pnpm install --prod
+              run: pnpm install --production
 
             - name: rename config examples for build success
-              run: cp config.example.json config.json
+              run: cp config/config.example.json config/config.json
 
             - name: Build using TSC
               run: pnpm run build
