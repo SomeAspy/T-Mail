@@ -9,8 +9,12 @@ It can be configured to send emails and log results to a Google Sheet.
 1.  Clone this repository
 2.  Install the [PiGPIO C Library](https://github.com/joan2937/pigpio)
 3.  Run `pnpm i --prod`
-4.  [Optional] Run `pnpm build` (The build output is included in dist to compensate for devices that will have stroke compiling locally)
+4.  Run `pnpm build`
 5.  Run `pnpm start` This will request root - it is needed to access the GPIO pins.
+
+## Low End Devices (specifically the first RPI 0 with 32 bits)
+
+1.  Pre-built can be downloaded at https://nightly.link/SomeAspy/T-Mail/workflows/build/main/build.zip (This will always be up to date)
 
 ## Configuration
 
