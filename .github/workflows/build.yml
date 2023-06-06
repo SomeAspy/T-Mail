@@ -44,8 +44,8 @@ jobs:
             - name: Remove build configs
               run: rm config/config.json && rm config/credentials.json
 
-            - name: Copy package.json and scripts
-              run: cp package.json dist/package.json && cp -R scripts dist/scripts/
+            - name: Copy package.json, pnpm lock, and scripts
+              run: cp package.json dist/package.json && cp -R scripts dist/scripts/ && cp pnpm-lock.yaml dist/pnpm-lock.yaml
 
             - name: Upload Build
               uses: actions/upload-artifact@v3
