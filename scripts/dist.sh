@@ -20,4 +20,5 @@ pnpm i -P
 pm2 restart pm2.config.js || pm2 start pm2.config.js
 
 # cleanup
+cd ..
 rm dist.zip
