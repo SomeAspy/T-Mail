@@ -17,9 +17,9 @@ It can be configured to send emails and log results to a Google Sheet.
 Prebuilt status:
 [![Build](https://github.com/SomeAspy/T-Mail/actions/workflows/build.yml/badge.svg)](https://github.com/SomeAspy/T-Mail/actions/workflows/build.yml)
 
-1.  Pre-built can be downloaded at https://nightly.link/SomeAspy/T-Mail/workflows/build/main/build.zip (This will always be up to date)
-2.  If this is the first time you are running this, unzip the file and move `prebuilt-update.sh` to the folder outside of the build folder.
-3.  Run `prebuilt-update.sh` (This may request root - it is needed to access the GPIO pins.)
+1.  Pre-built can be downloaded at https://nightly.link/SomeAspy/T-Mail/workflows/build/main/dist.zip (This will always be up to date)
+2.  If this is the first time you are running this, unzip the file and move `prebuilt-update.sh` to the folder outside of the dist folder.
+3.  Run `dist.sh` (This may request root - it is needed to access the GPIO pins.)
 
 -   The script does not automatically restart the program. You can do this manually or use pm2 to handle it.
     -   A PM2 config is included in the build.

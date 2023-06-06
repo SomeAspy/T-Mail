@@ -45,7 +45,7 @@ jobs:
               run: rm config/config.json && rm config/credentials.json
 
             - name: Copy important files to the build
-              run: cp package.json dist/package.json && cp -R scripts dist/scripts/ && cp pnpm-lock.yaml dist/pnpm-lock.yaml && cp ecosystem.config.cjs dist/ecosystem.config.js
+              run: cp package.json dist/package.json && cp -r scripts dist && cp pm2.config.cjs dist/pm2.config.js
 
             - name: Upload build artifacts
               uses: actions/upload-artifact@v3

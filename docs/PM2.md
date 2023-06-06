@@ -3,7 +3,7 @@
 ## T-Mail includes a pm2 config.
 
 It can be run with
-`pm2 start ecosystem.config.js`
+`pm2 start pm2.config.js`
 
 All typical PM2 operations work with this.
 
