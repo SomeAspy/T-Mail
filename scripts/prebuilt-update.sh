@@ -10,7 +10,7 @@ mv build/config tmailConfig.old
 mv build/package.json tmailPackage.json.old
 
 wget -O build.zip https://nightly.link/SomeAspy/T-Mail/workflows/build/main/build.zip
-unzip -of build.zip -d build
+unzip -o build.zip -d build
 
 # copy over the prebuilt updater
 cp build/scripts/prebuilt-update.sh ./prebuilt-update.sh
