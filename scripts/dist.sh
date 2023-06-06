@@ -17,7 +17,7 @@ pnpm i -P
 pnpm i -P
 
 # restart / start PM2 if it isn't running already
-pm2 restart pm2.config.js || pm2 start pm2.config.js
+pm2 restart pm2.config.cjs || pm2 start pm2.config.cjs
 pm2 save
 
 # cleanup

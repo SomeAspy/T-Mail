@@ -45,7 +45,7 @@ jobs:
               run: rm config/config.json && rm config/credentials.json
 
             - name: Copy important files to the build
-              run: cp package.json dist/package.json && cp -r scripts dist && cp pm2.config.cjs dist/pm2.config.js
+              run: cp package.json dist/package.json && cp -r scripts dist && cp pm2.config.cjs dist/pm2.config.cjs
 
             - name: Upload build artifacts
               uses: actions/upload-artifact@v3
