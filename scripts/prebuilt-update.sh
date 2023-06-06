@@ -28,10 +28,10 @@ else
     cd build
 
     # update packages
-    pnpm i --production
+    pnpm i -P
 
     # on RPI0 the first package grab often fails
-    pnpm i --production
+    pnpm i -P
 
     cd ..
     rm tmailPackage.json.old

@@ -10,8 +10,11 @@ Script prerequisites:
 
 -   `unzip`
 -   `wget`
--   `pigpio`
 -   `pnpm`
+-   `pigpio`
+    -   `make`
+    -   `g++`
+    -   `python3`
 
 This script is made for the prebuilt dist only
 
