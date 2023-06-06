@@ -5,27 +5,27 @@
 shopt -s dotglob
 
 # Save important files
-mv build/node_modules tmailNodeModules.old
-mv build/config tmailConfig.old
-mv build/package.json tmailPackage.json.old
+mv dist/node_modules tmailNodeModules.old
+mv dist/config tmailConfig.old
+mv dist/package.json tmailPackage.json.old
 
-wget -O build.zip https://nightly.link/SomeAspy/T-Mail/workflows/build/main/build.zip
-unzip -o build.zip -d build
+wget -O dist.zip https://nightly.link/SomeAspy/T-Mail/workflows/build/main/build.zip
+unzip -o dist.zip -d dist
 
 # copy over the prebuilt updater
-cp build/scripts/prebuilt-update.sh ./prebuilt-update.sh
+cp dist/scripts/prebuilt-update.sh ./prebuilt-update.sh
 
 # return important files
-mkdir build/node_modules
-mv tmailNodeModules.old/**/* build/node_modules
-mv tmailConfig.old/**/* build/config
+mkdir dist/node_modules
+mv tmailNodeModules.old/**/* dist/node_modules
+mv tmailConfig.old/**/* dist/config
 rm -rf tmailNodeModules.old
 
-if (cmp -s build/package.json tmailPackage.json.old) then
+if (cmp -s dist/package.json tmailPackage.json.old) then
     echo "No changes to package.json"
     rm tmailPackage.json.old
 else
-    cd build
+    cd dist
 
     # update packages
     pnpm i -P

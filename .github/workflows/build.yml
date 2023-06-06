@@ -26,7 +26,7 @@ jobs:
               with:
                   version: latest
 
-            - name: Add Rasbian Package Repositories
+            - name: Add Rasbian package repositories
               run: echo deb http://archive.raspberrypi.org/debian/ bullseye main | sudo tee /etc/apt/sources.list.d/raspberrypi.list && sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7FA3303E
 
             - name: Install PiGPIO
@@ -35,21 +35,21 @@ jobs:
             - name: Install Node.js dependencies
               run: pnpm install
 
-            - name: rename config examples for build success
+            - name: Set sample configs for building
               run: cp config/config.example.json config/config.json && cp config/credentials.example.json config/credentials.json
 
             - name: Build using TSC
               run: pnpm run build
 
-            - name: Remove build configs
+            - name: Remove sample configs for building
               run: rm config/config.json && rm config/credentials.json
 
-            - name: Copy package.json, pnpm lock, and scripts
-              run: cp package.json dist/package.json && cp -R scripts dist/scripts/ && cp pnpm-lock.yaml dist/pnpm-lock.yaml
+            - name: Copy important files to the build
+              run: cp package.json dist/package.json && cp -R scripts dist/scripts/ && cp pnpm-lock.yaml dist/pnpm-lock.yaml && cp ecosystem.config.cjs dist/ecosystem.config.js
 
-            - name: Upload Build
+            - name: Upload build artifacts
               uses: actions/upload-artifact@v3
               with:
-                  name: build
+                  name: dist
                   path: dist/
                   if-no-files-found: error

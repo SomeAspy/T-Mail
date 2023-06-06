@@ -23,4 +23,5 @@ This script is made for the prebuilt dist only
 3.  Run `prebuilt-update.sh` (This may request root - it is needed to access the GPIO pins.)
 
 -   The script does not automatically restart the program. You can do this manually or use pm2 to handle it.
+    -   A PM2 config is included in the build.
 -   The script will retain configs, and you can put it on a cron task to run it every so often.
