@@ -15,7 +15,7 @@ jobs:
 
         steps:
             - name: Check out Git repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - name: Set up Node.js
               uses: actions/setup-node@v3
@@ -43,9 +43,9 @@ jobs:
 
             - name: Remove build configs
               run: rm config/config.json && rm config/credentials.json
-              
-            - name: Copy package.json into build for easy install
-              run: cp package.json dist/package.json
+
+            - name: Copy package.json and scripts
+              run: cp package.json dist/package.json && cp scripts/**/* dist/scripts/
 
             - name: Upload Build
               uses: actions/upload-artifact@v3

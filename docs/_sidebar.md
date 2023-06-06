@@ -3,3 +3,4 @@
 -   [Wiring](/Wiring.md)
 -   [Google Sheets](/GoogleSheets.md)
 -   [Email](/Email.md)
+-   [Scripts](/Scripts.md)
