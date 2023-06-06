@@ -45,7 +45,7 @@ jobs:
               run: rm config/config.json && rm config/credentials.json
               
             - name: Copy package.json into build for easy install
-            - run: cp package.json dist/package.json
+              run: cp package.json dist/package.json
 
             - name: Upload Build
               uses: actions/upload-artifact@v3
