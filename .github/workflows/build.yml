@@ -42,7 +42,7 @@ jobs:
               run: pnpm run build
 
             - name: Remove sample configs for building
-              run: rm config/config.json && rm config/credentials.json
+              run: rm dist/config/config.json && rm dist/config/credentials.json
 
             - name: Copy important files to the build
               run: cp package.json dist/package.json && cp -r scripts dist && cp pm2.config.cjs dist/pm2.config.cjs
