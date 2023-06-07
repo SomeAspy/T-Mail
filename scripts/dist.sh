@@ -17,9 +17,9 @@ pnpm i -P
 pnpm i -P
 
 # restart / start PM2 if it isn't running already
+cd ..
 pm2 restart pm2.config.cjs || pm2 start pm2.config.cjs
 pm2 save
 
 # cleanup
-cd ..
 rm dist.zip
