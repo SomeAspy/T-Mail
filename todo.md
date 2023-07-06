@@ -1,2 +1,2 @@
 -   API endpoint
--   log every temp check to spreadsheet
+-   Automate Daily Dependatbot PR merging
