@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^20.4.1
-    version: 20.4.1
+    specifier: ^20.4.2
+    version: 20.4.2
   '@types/nodemailer':
     specifier: ^6.4.8
     version: 6.4.8
@@ -376,29 +376,29 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 20.4.1
+      '@types/node': 20.4.2
     dev: true
 
-  /@types/node@20.4.1:
-    resolution: {integrity: sha512-JIzsAvJeA/5iY6Y/OxZbv1lUcc8dNSE77lb2gnBH+/PJ3lFR1Ccvgwl5JWnHAkNHcRsT0TbpVOsiMKZ1F/yyJg==}
+  /@types/node@20.4.2:
+    resolution: {integrity: sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==}
     dev: true
 
   /@types/nodemailer@6.4.8:
     resolution: {integrity: sha512-oVsJSCkqViCn8/pEu2hfjwVO+Gb3e+eTWjg3PcjeFKRItfKpKwHphQqbYmPQrlMk+op7pNNWPbsJIEthpFN/OQ==}
     dependencies:
-      '@types/node': 20.4.1
+      '@types/node': 20.4.2
     dev: true
 
   /@types/pigpio-dht@1.1.1:
     resolution: {integrity: sha512-dN+5en7VF2IpI33gstObLLq18LD0pNm5cnzdMRVg01PQ5NeFN1fC+wgRxXDVJP9zUu8hu/ltQcQkxJ2fdro3/A==}
     dependencies:
-      '@types/node': 20.4.1
+      '@types/node': 20.4.2
     dev: true
 
   /@types/responselike@1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 20.4.1
+      '@types/node': 20.4.2
     dev: true
 
   /@types/semver@7.5.0:
