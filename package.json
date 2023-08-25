@@ -21,7 +21,7 @@
 		"typescript-eslint-language-service": "^5.0.5"
 	},
 	"dependencies": {
-		"googleapis": "^126.0.0",
+		"googleapis": "^126.0.1",
 		"nodemailer": "^6.9.4",
 		"pigpio-dht": "^1.1.1"
 	}
