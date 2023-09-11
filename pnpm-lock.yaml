@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^20.6.0
     version: 20.6.0
   '@types/nodemailer':
-    specifier: ^6.4.9
-    version: 6.4.9
+    specifier: ^6.4.10
+    version: 6.4.10
   '@types/pigpio-dht':
     specifier: ^1.1.1
     version: 1.1.1
@@ -383,8 +383,8 @@ packages:
     resolution: {integrity: sha512-najjVq5KN2vsH2U/xyh2opaSEz6cZMR2SetLIlxlj08nOcmPOemJmUK2o4kUzfLqfrWE0PIrNeE16XhYDd3nqg==}
     dev: true
 
-  /@types/nodemailer@6.4.9:
-    resolution: {integrity: sha512-XYG8Gv+sHjaOtUpiuytahMy2mM3rectgroNbs6R3djZEKmPNiIJwe9KqOJBGzKKnNZNKvnuvmugBgpq3w/S0ig==}
+  /@types/nodemailer@6.4.10:
+    resolution: {integrity: sha512-oPW/IdhkU3FyZc1dzeqmS+MBjrjZNiiINnrEOrWALzccJlP5xTlbkNr2YnTnnyj9Eqm5ofjRoASEbrCYpA7BrA==}
     dependencies:
       '@types/node': 20.6.0
     dev: true
