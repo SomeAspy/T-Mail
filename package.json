@@ -15,7 +15,7 @@
 		"docsify-cli": "^4.4.4",
 		"eslint": "^8.49.0",
 		"eslint-plugin-json": "^3.1.0",
-		"tsx": "^3.12.9",
+		"tsx": "^3.12.10",
 		"typescript": "^5.2.2",
 		"typescript-eslint": "0.0.1-alpha.0",
 		"typescript-eslint-language-service": "^5.0.5"
