@@ -7,22 +7,22 @@
 		"test_email": "tsx src/tests/email.ts"
 	},
 	"devDependencies": {
-		"@types/node": "^20.8.3",
-		"@types/nodemailer": "^6.4.11",
-		"@types/pigpio-dht": "^1.1.1",
+		"@types/node": "^20.8.7",
+		"@types/nodemailer": "^6.4.13",
+		"@types/pigpio-dht": "^1.1.2",
 		"@typescript-eslint/eslint-plugin": "^5.62.0",
 		"@typescript-eslint/parser": "^5.62.0",
 		"docsify-cli": "^4.4.4",
 		"eslint": "^8.51.0",
 		"eslint-plugin-json": "^3.1.0",
-		"tsx": "^3.13.0",
+		"tsx": "^3.14.0",
 		"typescript": "^5.2.2",
 		"typescript-eslint": "0.0.1-alpha.0",
 		"typescript-eslint-language-service": "^5.0.5"
 	},
 	"dependencies": {
 		"googleapis": "^126.0.1",
-		"nodemailer": "^6.9.5",
+		"nodemailer": "^6.9.6",
 		"pigpio-dht": "^1.1.1"
 	}
 }
