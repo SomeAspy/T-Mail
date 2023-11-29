@@ -23,6 +23,6 @@
 		"pigpio-dht": "^1.1.1"
 	},
 	"optionalDependencies": {
-		"tsx": "^4.5.0"
+		"tsx": "^4.6.0"
 	}
 }
