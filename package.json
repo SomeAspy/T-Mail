@@ -15,7 +15,7 @@
 		"docsify-cli": "^4.4.4",
 		"eslint": "^8.55.0",
 		"eslint-plugin-json": "^3.1.0",
-		"typescript": "^5.3.2"
+		"typescript": "^5.3.3"
 	},
 	"dependencies": {
 		"googleapis": "^129.0.0",
