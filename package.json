@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"googleapis": "^129.0.0",
-		"nodemailer": "^6.9.7",
+		"nodemailer": "^6.9.8",
 		"pigpio-dht": "^1.1.1"
 	},
 	"optionalDependencies": {
