@@ -9,8 +9,8 @@ dependencies:
     specifier: ^131.0.0
     version: 131.0.0
   nodemailer:
-    specifier: ^6.9.8
-    version: 6.9.8
+    specifier: ^6.9.9
+    version: 6.9.9
   pigpio-dht:
     specifier: ^1.1.1
     version: 1.1.1
@@ -1964,8 +1964,8 @@ packages:
     dependencies:
       whatwg-url: 5.0.0
 
-  /nodemailer@6.9.8:
-    resolution: {integrity: sha512-cfrYUk16e67Ks051i4CntM9kshRYei1/o/Gi8K1d+R34OIs21xdFnW7Pt7EucmVKA0LKtqUGNcjMZ7ehjl49mQ==}
+  /nodemailer@6.9.9:
+    resolution: {integrity: sha512-dexTll8zqQoVJEZPwQAKzxxtFn0qTnjdQTchoU6Re9BUUGBJiOy3YMn/0ShTW6J5M0dfQ1NeDeRTTl4oIWgQMA==}
     engines: {node: '>=6.0.0'}
     dev: false
 
