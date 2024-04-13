@@ -1,6 +1,10 @@
-import config from '../config/config.json' assert { type: 'json' };
-import emailTemplates from '../config/emailTemplates.json' assert { type: 'json' };
+import untypedConfig from '../config/config.json' assert { type: 'json' };
+import untypedEmailTemplates from '../config/emailTemplates.json' assert { type: 'json' };
 import { sendEmail } from './sendEmail.js';
+import type { Config, EmailTemplates } from './types/config.js';
+
+const config = untypedConfig as Config;
+const emailTemplates = untypedEmailTemplates as EmailTemplates;
 
 import type { EnvironmentReading } from './types/sensor.js';
 

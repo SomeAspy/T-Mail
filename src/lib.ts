@@ -1,4 +1,7 @@
-import config from '../config/config.json' assert { type: 'json' };
+import untypedConfig from '../config/config.json' assert { type: 'json' };
+import type { Config } from './types/config.js';
+
+const config = untypedConfig as Config;
 
 export function fillBlanks(text: string, temp: number, humidity: number) {
     return text

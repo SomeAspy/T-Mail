@@ -1,4 +1,8 @@
-import config from '../config/config.json' assert { type: 'json' };
+import untypedConfig from '../config/config.json' assert { type: 'json' };
+
+import type { Config } from './types/config.js';
+
+const config = untypedConfig as Config;
 
 console.log(`
 T-Mail - https://github.com/SomeAspy/T-Mail

@@ -20,19 +20,14 @@
         "useUnknownInCatchVariables": true,
         "outDir": "dist",
         "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "nodenext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "types": [
             "node"
         ],
         "esModuleInterop": true,
         "removeComments": true,
         "resolveJsonModule": true,
-        "plugins": [
-            {
-                "name": "typescript-eslint-language-service"
-            }
-        ],
         "lib": [
             "ESNext",
         ],
@@ -40,14 +35,11 @@
     "include": [
         "src/**/*.ts",
         "src/tests/*.ts",
-        "config/*.json"
+        "config/*.json",
+        "eslint.config.js"
     ],
     "exclude": [
         "node_modules",
         "dist",
-    ],
-    "ts-node": {
-        "esm": true,
-        "experimentalSpecifierResolution": "node"
-    }
+    ]
 }

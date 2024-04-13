@@ -1,6 +1,10 @@
 import { TransportOptions, createTransport } from 'nodemailer';
 
-import config from '../config/config.json' assert { type: 'json' };
+import untypedConfig from '../config/config.json' assert { type: 'json' };
+
+import type { Config } from './types/config.js';
+
+const config = untypedConfig as Config;
 
 import type { Letter, Content } from './types/sendEmail.d.ts';
 import { fillBlanks } from './lib.js';
