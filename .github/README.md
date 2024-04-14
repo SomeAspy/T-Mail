@@ -12,6 +12,4 @@ Send an email when the temperature reaches or exits a given range.
 
 ## Configuration
 
-See [the Docs](https://tmail.aspy.dev) for configuration options.
-
-### This Repository was commissioned by my manager
+See [the Docs](https://tmail.github.aspy.dev) for configuration options.
