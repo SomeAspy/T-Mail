@@ -1,6 +1,6 @@
 // import type { Config, GCredentials } from './types/config.d.ts';
-// import config from '../config/config.json' assert { type: 'json' };
-// import gCreds from '../config/credentials.json' assert { type: 'json' };
+// import config from '../config/config.json' with { type: 'json' };
+// import gCreds from '../config/credentials.json' with { type: 'json' };
 // import { sheets } from 'googleapis/build/src/apis/sheets/index.js';
 // import type { EnvironmentReading } from './types/sensor.js';
 

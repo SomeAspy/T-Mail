@@ -1,4 +1,4 @@
-import untypedConfig from '../config/config.json' assert { type: 'json' };
+import untypedConfig from '../config/config.json' with { type: 'json' };
 import type { Config } from './types/config.js';
 
 const config = untypedConfig as Config;

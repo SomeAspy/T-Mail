@@ -1,5 +1,5 @@
-import untypedConfig from '../config/config.json' assert { type: 'json' };
-import untypedEmailTemplates from '../config/emailTemplates.json' assert { type: 'json' };
+import untypedConfig from '../config/config.json' with { type: 'json' };
+import untypedEmailTemplates from '../config/emailTemplates.json' with { type: 'json' };
 import { sendEmail } from './sendEmail.js';
 import type { Config, EmailTemplates } from './types/config.js';
 

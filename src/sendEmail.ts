@@ -1,6 +1,6 @@
 import { TransportOptions, createTransport } from 'nodemailer';
 
-import untypedConfig from '../config/config.json' assert { type: 'json' };
+import untypedConfig from '../config/config.json' with { type: 'json' };
 
 import type { Config } from './types/config.js';
 
