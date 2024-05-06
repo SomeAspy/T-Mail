@@ -7,7 +7,7 @@
 		"test_email": "tsx src/tests/email.ts"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.1.1",
+		"@eslint/js": "^9.2.0",
 		"@types/eslint__js": "^8.42.3",
 		"@types/node": "^20.12.7",
 		"@types/nodemailer": "^6.4.14",
