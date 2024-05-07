@@ -34,7 +34,7 @@ export async function sendEmail(
             transporter.sendMail(letter),
             new Promise((_, reject) => {
                 setTimeout(() => {
-                    reject('Timeout');
+                    reject(new Error('Timeout'));
                 }, 10000);
             }),
         ]);

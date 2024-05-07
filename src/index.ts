@@ -11,15 +11,15 @@ Current Configs:
     Identifier: ${config.identifier}
     Send To: ${config.email.to.join(', ')}
     Sender From: ${config.email.from}
-    Temperature Range: ${config.sensing.temperature.min}°${
+    Temperature Range: ${config.sensing.temperature.min.toString()}°${
     config.sensing.temperature.fahrenheit ? 'F' : 'C'
-} - ${config.sensing.temperature.max}°${
+} - ${config.sensing.temperature.max.toString()}°${
     config.sensing.temperature.fahrenheit ? 'F' : 'C'
 }
-    Humidity Range: ${config.sensing.humidity.min}% - ${
-    config.sensing.humidity.max
+    Humidity Range: ${config.sensing.humidity.min.toString()}% - ${
+    config.sensing.humidity.max.toString()
 }%
-    Interval: Every ${config.sensing.interval} minute(s)
+    Interval: Every ${config.sensing.interval.toString()} minute(s)
     Enabled Modules: ${config.email.enabled ? 'Email' : ''} ${
     config.googleSheets.enabled ? 'Google Sheets' : ''
 }
