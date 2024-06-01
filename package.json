@@ -23,6 +23,6 @@
 	},
 	"optionalDependencies": {
 		"docsify-cli": "^4.4.4",
-		"tsx": "^4.10.5"
+		"tsx": "^4.11.0"
 	}
 }
