@@ -23,8 +23,6 @@ jobs:
                   node-version: latest
 
             - uses: pnpm/action-setup@v4
-              with:
-                  version: latest
 
             - name: Add Rasbian Package Repositories
               run: echo deb http://archive.raspberrypi.org/debian/ bullseye main | sudo tee /etc/apt/sources.list.d/raspberrypi.list && sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7FA3303E
