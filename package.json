@@ -13,7 +13,7 @@
 		"@types/nodemailer": "^6.4.15",
 		"@types/pigpio-dht": "^1.1.3",
 		"eslint": "^9.4.0",
-		"typescript": "^5.4.5",
+		"typescript": "^5.5.3",
 		"typescript-eslint": "^7.11.0"
 	},
 	"dependencies": {
